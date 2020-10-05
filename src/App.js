@@ -7,7 +7,8 @@ import "./main.css";
 
 export default function App() {
   const [todos, setTodos] = useState([]);
-  const handleAddTodo = (todoInput) => setTodos([...todos, todoInput]);
+  const handleAddTodo = (todoInput) =>
+    setTodos([...todos, { id: Date.now(), content: todoInput, type: "todo" }]);
 
   return (
     <div className="container">

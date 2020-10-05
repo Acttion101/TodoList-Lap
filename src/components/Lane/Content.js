@@ -7,8 +7,8 @@ function Content({ title, list, type }) {
       <div className="lane-title">{title}</div>
       <ul className="list-container">
         {list.map((item, index) => (
-          <ListItem index={index} type={type}>
-            {item}
+          <ListItem key={item.id} index={index} type={type}>
+            {item.Content}
           </ListItem>
         ))}
       </ul>
